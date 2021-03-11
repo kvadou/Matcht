@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import LinkedIn from "../../components/LinkedInPage/LinkedInPage";
+
 import "./Login.css";
 
 export default function Login() {
@@ -38,6 +40,15 @@ export default function Login() {
         <Button block size="lg" type="submit" disabled={!validateForm()}>
           Login
         </Button>
+        <LinkedIn
+          clientId="81lx5we2omq9xh"
+          redirectUri="http://localhost:3000/linkedin"
+          renderElement={({ onClick, disabled }) => (
+            <button onClick={onClick} disabled={disabled}>
+              Custom linkedin element
+            </button>
+          )}
+        />
       </Form>
     </div>
   );

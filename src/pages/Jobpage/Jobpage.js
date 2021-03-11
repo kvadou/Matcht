@@ -1,8 +1,11 @@
 import React from 'react';
+import "./style.css";
 
 function Jobpage() {
     return(
-        <h3> I am a Job Page </h3>
+        <div className="job-card">
+            
+        </div>
     )
 }
 

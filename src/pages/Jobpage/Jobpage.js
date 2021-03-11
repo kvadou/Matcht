@@ -10,6 +10,8 @@ function Jobpage() {
 
     const opacityVal = useTransform(motionVal, [-200, -150, 0, 150, 200], [0, 1, 1, 1, 0]);
 
+    const animationContrl = useAnimation();
+    
     return(
         <div className="job-card">
 

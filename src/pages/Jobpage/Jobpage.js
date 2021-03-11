@@ -13,8 +13,9 @@ function Jobpage() {
     const animationContrl = useAnimation();
 
     return(
-        <div className="job-card">
+        <div>
             <Frame 
+                className="job-card"
                 center
                 drag="x"
                 x={motionVal}
@@ -22,7 +23,11 @@ function Jobpage() {
                 opacity={opacityVal}
                 dragConstraints = {{ left: -1000, right: 1000 }}
                 onDragEnd={(event, info) => {
-                    
+                    if (Math.abs(info.point.x) <= 150) {
+                        animationContrl.start({ x: 0 });
+                    } else {
+                        animationContrl.start({ x: info.point.x < 0 ? -200 : 200 });
+                    }
                 }}
             />
         </div>

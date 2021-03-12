@@ -22,7 +22,7 @@ function Jobpage() {
                 rotate={rotateVal}
                 opacity={opacityVal}
                 dragConstraints = {{ left: -1000, right: 1000 }}
-                onDragEnd={(event, info) => {
+                onDragEnd={ (event, info) => {
                     if (Math.abs(info.point.x) <= 150) {
                         animationContrl.start({ x: 0 });
                     } else {

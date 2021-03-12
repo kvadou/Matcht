@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "firstName": "Leroy",
+        "lastName": "Brown",
+        "profilePic": "https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg",
+        "savedJobs": [ {
+            "jobTitle": "Engineer",
+            "jobName": "Google",
+            "location": "Minneapolis",
+            "link": "https://google.com"
+        },
+        {
+            "jobTitle": "Dog Walker",
+            "jobName": "Wag",
+            "location": "Duluth",
+            "link": "https://wagwalking.com/"
+
+        },
+        {
+            "jobTitle": "Project Manger",
+            "jobName": "Amazon",
+            "location": "St. Cloud",
+            "link": "https://amazon.com"
+        }
+        ]
+    }
+]

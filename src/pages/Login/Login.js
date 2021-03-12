@@ -20,7 +20,7 @@ export default function Login() {
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
+        {/* <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
             autoFocus
@@ -39,7 +39,7 @@ export default function Login() {
         </Form.Group>
         <Button block size="lg" type="submit" disabled={!validateForm()}>
           Login
-        </Button>
+        </Button> */}
         <LinkedIn
           clientId="81lx5we2omq9xh"
           redirectUri="http://localhost:3000/linkedin"

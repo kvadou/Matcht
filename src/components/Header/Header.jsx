@@ -1,15 +1,22 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
-      <Navbar.Brand href="#jobpage">Job Search</Navbar.Brand>
+      <Navbar.Brand to="/jobpage" as={Link}>
+        Job Search
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#profile">Profile</Nav.Link>
-          <Nav.Link href="#location">Location</Nav.Link>
+          <Nav.Link to="/profile" as={Link}>
+            Profile
+          </Nav.Link>
+          <Nav.Link to="/search" as={Link}>
+            Search
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

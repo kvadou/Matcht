@@ -4,6 +4,11 @@ import JobFrame from "./JobFrame";
 
 class Jobpage extends Component {
 
+  state = {
+    results: [],
+  };
+
+  
 }
 
 export default Jobpage;

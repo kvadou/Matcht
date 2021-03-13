@@ -1,37 +1,34 @@
-import React from 'react';
+import React, { Component } from "react";
 import "./style.css";
-import { Frame, useMotionValue, useTransform, useAnimation } from "framer";
+import JobFrame from "./JobFrame";
 
-function Jobpage() {
+class Jobpage extends Component {
 
-    const motionVal = useMotionValue(0);
+  state = {
+    results: [],
+  };
 
-    const rotateVal = useTransform(motionVal, [-200, 200], [-50, 50]);
+  componentDidMount() {
+    fetch("https://random-data-api.com/api/company/random_company?size=10")
+      .then((response) => response.json())  
+      .then((res) => this.setState({ results: res }))
+      .catch((err) => console.log(err));
+  };
 
-    const opacityVal = useTransform(motionVal, [-200, -150, 0, 150, 200], [0, 1, 1, 1, 0]);
-
-    const animationContrl = useAnimation();
-
-    return(
-        <div>
-            <Frame 
-                className="job-card"
-                center
-                drag="x"
-                x={motionVal}
-                rotate={rotateVal}
-                opacity={opacityVal}
-                dragConstraints = {{ left: -1000, right: 1000 }}
-                onDragEnd={ (event, info) => {
-                    if (Math.abs(info.point.x) <= 150) {
-                        animationContrl.start({ x: 0 });
-                    } else {
-                        animationContrl.start({ x: info.point.x < 0 ? -200 : 200 });
-                    }
-                }}
-            />
-        </div>
-    )
+  render() {
+    return (
+      <div>
+        <JobFrame />
+        <ul className="list-group">
+            {this.state.results.map(result => (
+                <li className="list-group-item" key={result.id}>
+                    {result.business_name}
+                </li>
+            ))}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Jobpage;

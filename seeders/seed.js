@@ -3,11 +3,12 @@ const db = require("../models");
 
 // We could seed the mongodb with fake jobs here
 
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactfakejobs"
-);
+mongoose.connect("mongodb://localhost/fakejob", {
+  useNewUrlParser: true,
+  useFindAndModify: false,
+});
 
-const fakejobSeed = [
+const fakejob = [
   {
     company: "Facebook",
     title: "Software Engineer",

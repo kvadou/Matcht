@@ -14,6 +14,21 @@ class Jobpage extends Component {
       .then((res) => this.setState({ results: res }))
       .catch((err) => console.log(err));
   };
+
+  render() {
+    return (
+      <div>
+        <JobFrame />
+        <ul className="list-group">
+            {this.state.results.map(result => (
+                <li className="list-group-item" key={result.id}>
+                    {result.business_name}
+                </li>
+            ))}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default Jobpage;

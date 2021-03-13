@@ -8,7 +8,12 @@ class Jobpage extends Component {
     results: [],
   };
 
-  
+  componentDidMount() {
+    fetch("https://random-data-api.com/api/company/random_company?size=10")
+      .then((response) => response.json())  
+      .then((res) => this.setState({ results: res }))
+      .catch((err) => console.log(err));
+  };
 }
 
 export default Jobpage;

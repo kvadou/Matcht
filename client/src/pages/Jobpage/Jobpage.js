@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import SwipeCard from "react-tinder-card";
 import "./style.css";
-import JobFrame from "./JobFrame";
 
 class Jobpage extends Component {
 

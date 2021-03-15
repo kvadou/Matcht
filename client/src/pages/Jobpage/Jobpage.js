@@ -28,6 +28,7 @@ class Jobpage extends Component {
                 style={{ backgroundImage: `url(${job.logo})` }}
                 className="card"
               >
+                <h3>{job.business_name}</h3>
               </div>
             </SwipeCard>
           ))}

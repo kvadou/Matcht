@@ -1,11 +1,11 @@
 import React, { Component } from "react";
+import TinderCard from "react-tinder-card";
 import "./style.css";
-import JobFrame from "./JobFrame";
 
 class Jobpage extends Component {
 
   state = {
-    results: [],
+    results: []
   };
 
   componentDidMount() {
@@ -17,15 +17,23 @@ class Jobpage extends Component {
 
   render() {
     return (
-      <div>
-        <JobFrame />
-        <ul className="list-group">
-            {this.state.results.map(result => (
-                <li className="list-group-item" key={result.id}>
-                    {result.business_name}
-                </li>
-            ))}
-        </ul>
+      <div className="job-card">
+        <div className="container">
+          {this.state.results.map((res) => (
+            <TinderCard
+              className="swipe"
+              key={res.business_name}
+              preventSwipe={["up", "down"]}
+            >
+              <div
+                style={{ backgroundImage: `url(${res.logo})` }}
+                className="card"
+              >
+                <h3>{res.business_name}</h3>
+              </div>
+            </TinderCard>
+          ))}
+        </div>
       </div>
     );
   }

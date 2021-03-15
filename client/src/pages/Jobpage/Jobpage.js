@@ -17,10 +17,14 @@ class Jobpage extends Component {
 
   render() {
     return (
-      <div>
-        {this.state.results.map((res) => (
-          <JobFrame image={res.logo}/>
-        ))}
+      <div className="container">
+        <div className="job-card">
+          {this.state.results.map((job) => (
+            <SwipeCard >
+              
+            </SwipeCard>
+          ))}
+        </div>
       </div>
     );
   }

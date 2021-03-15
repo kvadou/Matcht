@@ -25,10 +25,7 @@ class Jobpage extends Component {
               key={res.business_name}
               preventSwipe={["up", "down"]}
             >
-              <div
-                style={{ backgroundImage: `url(${res.logo})` }}
-                className="card"
-              >
+              <div style={{ backgroundImage: `url(${res.logo})` }} className="card">
                 <h3>{res.business_name}</h3>
               </div>
             </TinderCard>

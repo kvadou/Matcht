@@ -2,7 +2,7 @@ import React from 'react';
 import "./style.css";
 import { Frame, useMotionValue, useTransform, useAnimation } from "framer";
 
-function JobFrame() {
+function JobFrame(props) {
 
     const motionVal = useMotionValue(0);
 
@@ -18,6 +18,7 @@ function JobFrame() {
                 className="job-card"
                 center
                 drag="x"
+                image={props.image}
                 x={motionVal}
                 rotate={rotateVal}
                 opacity={opacityVal}

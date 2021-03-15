@@ -18,14 +18,9 @@ class Jobpage extends Component {
   render() {
     return (
       <div>
-        <JobFrame />
-        <ul className="list-group">
-            {this.state.results.map(result => (
-                <li className="list-group-item" key={result.id}>
-                    {result.business_name}
-                </li>
-            ))}
-        </ul>
+        {this.state.results.map((res) => (
+          <JobFrame image={res.logo}/>
+        ))}
       </div>
     );
   }

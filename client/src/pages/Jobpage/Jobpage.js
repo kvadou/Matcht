@@ -22,7 +22,9 @@ class Jobpage extends Component {
             <SwipeCard 
               className="swipe" 
               key={job.business_name}
-            ></SwipeCard>
+              preventSwipe={["up", "down"]}
+            >
+            </SwipeCard>
           ))}
         </div>
       </div>

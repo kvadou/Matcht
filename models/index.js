@@ -1,3 +1,3 @@
 module.exports = {
-  Fakejob: require("./fakejob"),
+  Job: require("./job")
 };

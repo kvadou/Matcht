@@ -25,13 +25,13 @@ function App() {
         </div>
         <Header />
         <Switch>
-          <PrivateRoute path="/search">
+          <PrivateRoute login={login} path="/search">
             <Search />
           </PrivateRoute>
-          <PrivateRoute path="/jobpage">
+          <PrivateRoute login={login} path="/jobpage">
             <Jobpage />
           </PrivateRoute>
-          <PrivateRoute path="/profile">
+          <PrivateRoute login={login} path="/profile">
             <Profile />
           </PrivateRoute>
           <Route path="/">

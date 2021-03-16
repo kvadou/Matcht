@@ -10,3 +10,9 @@
   background-size: contain;
   background-position: center;
 }
+
+.job-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}

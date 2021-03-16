@@ -32,10 +32,32 @@ function App() {
           {/* <PrivateRoute exact path="/search" component={Search} />
           <PrivateRoute exact path="/jobpage" component={Jobpage} />
           <PrivateRoute exact path="/profile" component={Profile} /> */}
-          
         </div>
       </Router>
     </AuthProvider>
+  //   <UserContext.Provider value={login}>
+  //   <Router>
+  //     <div>
+  //       <p>You must log in to view the page</p>
+  //       <button onClick={() => setLogin(!login)}>Log in</button>
+  //     </div>
+  //     <Header />
+  //     <Switch>
+  //       <PrivateRoute login={login} path="/search">
+  //         <Search />
+  //       </PrivateRoute>
+  //       <PrivateRoute login={login} path="/jobpage">
+  //         <Jobpage />
+  //       </PrivateRoute>
+  //       <PrivateRoute login={login} path="/profile">
+  //         <Profile />
+  //       </PrivateRoute>
+  //       <Route path="/">
+  //         <Login />
+  //       </Route>
+  //     </Switch>
+  //   </Router>
+  // </UserContext.Provider>
         
 
         

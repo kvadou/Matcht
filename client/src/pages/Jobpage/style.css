@@ -1,8 +1,12 @@
-.job-card {
-    background-repeat: "no-repeat"; 
-    background-size: "contain";
-    background-color: "#55ccff"; 
-    box-shadow: "5px 10px 18px #888888"; 
-    border-radius: 10;
-    height: 300;
+.card {
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  width: 1100px;
+  padding: 20px;
+  max-width: 85vw;
+  height: 500px;
+  border-radius: 20px;
+  background-size: contain;
+  background-position: center;
 }

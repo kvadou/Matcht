@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SwipeCard from "react-tinder-card";
-import { Link, useParams } from "react-router-dom";
 import "./style.css";
 //import jobdata from "../../utils/jobdata.json";
 import SwipeButtons from "../../components/SwipeButton/swipeButtons";
@@ -9,7 +8,6 @@ import API from "../../utils/API";
 function Jobpage() {
 
   const [jobsDb, setJobsDb] = useState([]);
-  const [jobData, setJobData] = useState([]);
 
   useEffect(() => {
     loadJobs();
@@ -22,18 +20,11 @@ function Jobpage() {
   }
 
   function deleteJob(id) {
-    API.deleteJob()
+    API.deleteJob(id)
       .then(res => loadJobs())
       .catch(err => console.log(err));
   }
 
-  const {id} = useParams()
-  useEffect(() => {
-    API.getJob(id)
-      .then(res => setJobData(res.data))
-      .catch(err => console.log(err));
-  })
- 
     return (
       <div className="container">
         <div className="job-card">
@@ -42,6 +33,8 @@ function Jobpage() {
               className="swipe" 
               key={job.id}
               preventSwipe={["up", "down"]}
+              onSwipe={deleteJob(job.id)}
+              //onCardLeftScreen=
             >
              <div className="row">
                     <div className="offset-3 col-6 offset-3">
@@ -62,6 +55,7 @@ function Jobpage() {
                 </div>
             </SwipeCard>
           ))}
+          <SwipeButtons/>
         </div>
       </div>
     );

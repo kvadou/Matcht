@@ -6,21 +6,24 @@ import SwipeButtons from "../../components/SwipeButton/swipeButtons";
 import API from "../../utils/API";
 
 function Jobpage() {
-  state = {
-      jobdata,
-        results: [],
-  };
 
-  componentDidMount() {
-    fetch(this.state.jobdata)
-      .then((response) => response.json())
-      .then((res) => this.setState({ results: res }))
-      .catch((err) => console.log(err));
-      console.log(this.state)
+  const [jobsDb, setJobsDb] = useState([]);
+  const [jobData, setJobData] = useState([]);
+
+  useEffect(() => {
+    loadJobs();
+  }, []);
+
+  function loadJobs() {
+    API.getJobs()
+      .then(res => setJobsDb(res.data))
+      .catch(err => console.log(err))
   }
+
+  
   
 
-  render() {
+ 
     return (
       <div className="container">
         <div className="job-card">
@@ -53,6 +56,6 @@ function Jobpage() {
       </div>
     );
   }
-}
+
 
 export default Jobpage;

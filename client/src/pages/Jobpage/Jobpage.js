@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import SwipeCard from "react-tinder-card";
 import "./style.css";
-import jobdata from '../../utils/jobdata.json';
+import jobdata from "../../utils/jobdata.json";
+import SwipeButtons from "../../components/SwipeButton/swipeButtons";
+import API from "../../utils/API";
 
-class Jobpage extends Component {
+function Jobpage() {
   state = {
       jobdata,
         results: [],

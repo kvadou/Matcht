@@ -763,3 +763,15 @@ const jobSeed = [
     company_logo_url: "https://remotive.io/job/494757/logo",
   },
 ];
+
+db.Job
+  .remove({})
+  .then(() => db.Job.collection.insertMany(jobSeed))
+  .then((data) => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });

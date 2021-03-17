@@ -2,13 +2,13 @@ import axios from "axios";
 
 const jobAPI = {
     getJobs: function() {
-        return axios.get("/api/jobs");
+        return axios.get("/api/jobpage");
     },
     getJob: function(id) {
-         return axios.get("/api/jobs/" + id);
+         return axios.get("/api/jobpage/" + id);
     },
     deleteJob: function(id) {
-        return axios.delete("/api/jobs/" + id);
+        return axios.delete("/api/jobpage/" + id);
     }
 };
 

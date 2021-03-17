@@ -1,32 +1,40 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import SwipeCard from "react-tinder-card";
 import "./style.css";
-import jobdata from '../../utils/jobdata.json';
+//import jobdata from "../../utils/jobdata.json";
+import SwipeButtons from "../../components/SwipeButton/swipeButtons";
+import API from "../../utils/API";
 
-class Jobpage extends Component {
-  state = {
-      jobdata,
-        results: [],
-  };
+function Jobpage() {
 
-  componentDidMount() {
-    fetch(this.state.jobdata)
-      .then((response) => response.json())
-      .then((res) => this.setState({ results: res }))
-      .catch((err) => console.log(err));
-      console.log(this.state)
+  const [jobsDb, setJobsDb] = useState([]);
+
+  useEffect(() => {
+    loadJobs();
+  }, []);
+
+  function loadJobs() {
+    API.getJobs()
+      .then(res => setJobsDb(res.data))
+      .catch(err => console.log(err))
   }
-  
 
-  render() {
+  function deleteJob(id) {
+    API.deleteJob(id)
+      .then(res => loadJobs())
+      .catch(err => console.log(err));
+  }
+
     return (
       <div className="container">
         <div className="job-card">
-          {this.state.jobdata.map((job) => (
+          {jobsDb.map((job) => (
             <SwipeCard 
               className="swipe" 
-              key={job.title}
+              key={job.id}
               preventSwipe={["up", "down"]}
+              onSwipe={deleteJob(job.id)}
+              //onCardLeftScreen=
             >
              <div className="row">
                     <div className="offset-3 col-6 offset-3">
@@ -47,10 +55,11 @@ class Jobpage extends Component {
                 </div>
             </SwipeCard>
           ))}
+          <SwipeButtons/>
         </div>
       </div>
     );
   }
-}
+
 
 export default Jobpage;

@@ -12,11 +12,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 //AUTH STUFF //
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import { AuthProvider } from "./Auth";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
-// import Home from "./pages/Home";
+import Login from "./pages/Login/Login";
+import SignUp from "./pages/SignUp/SignUp";
+
 
 function App() {
   const [login, setLogin] = useState(false);

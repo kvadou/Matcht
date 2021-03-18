@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Search.css";
 
 class Search extends Component {
   handleClick() {
@@ -6,32 +7,18 @@ class Search extends Component {
   }
   render() {
     return (
-      <form action="/jobsearch" method="get">
-        <label>
-          <span className="visually-hidden">Search Jobs</span>
-        </label>
-        <input
-          className="m-1"
-          type="text"
-          id="header-search"
-          placeholder="Search Jobs"
-          name="jobname"
-        />
-        <input
-          className="m-1"
-          type="text"
-          id="header-search"
-          placeholder="Location"
-          name="location"
-        />
-        <button
-          className="btn btn-primary"
-          type="submit"
-          onClick={this.handleClick}
-        >
-          Find Jobs
-        </button>
-      </form>
+      <div class="search">
+        <form action="/jobsearch" method="get">
+          <label class="jobs">
+            <span className="visually-hidden">Search Location</span>
+          </label>
+          <input className="m-1" type="text" id="header-search" size="lg" placeholder="Search Jobs" name="jobname" />
+          <input className="m-1" type="text" id="header-search" placeholder="Location" name="location" />
+          <button className="btn btn-info" type="submit" onClick={this.handleClick}>
+            Find Jobs
+          </button>
+        </form>
+      </div>
     );
   }
 }

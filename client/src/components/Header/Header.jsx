@@ -14,7 +14,7 @@ function Header() {
       ) : (
         <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
           <Navbar.Brand to="/jobpage" as={Link}>
-            Job Search
+            Job Page
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

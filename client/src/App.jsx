@@ -19,9 +19,7 @@ import SignUp from "./pages/SignUp/SignUp";
 
 
 function App() {
-  const [login, setLogin] = useState(false);
-
-  console.log(login);
+  const [login] = useState(false);
   return (
     <AuthProvider>
       <Router>
@@ -30,7 +28,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
         </div>
-        <Switch>
+       
           <Header />
           <PrivateRoute login={login} path="/search">
             <Search />
@@ -42,7 +40,7 @@ function App() {
             <Profile />
           </PrivateRoute>
           <Route path="/"></Route>
-        </Switch>
+        
       </Router>
     </AuthProvider>
     //   <UserContext.Provider value={login}>

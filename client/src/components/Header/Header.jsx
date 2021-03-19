@@ -10,7 +10,7 @@ function Header() {
   return (
     <>
       {!currentUser ? (
-        <Redirect to="/" />
+        <Redirect to="/login" />
       ) : (
         <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
           <Navbar.Brand to="/jobpage" as={Link}>

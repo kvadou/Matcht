@@ -18,8 +18,6 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-require("dotenv").config();
-
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/reactjob";
 mongoose.connect(MONGODB_URI, {

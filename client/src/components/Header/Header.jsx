@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import app from "../../base";
 import { AuthContext } from "../../Auth";
 
@@ -10,7 +10,7 @@ function Header() {
   return (
     <>
       {!currentUser ? (
-        ""
+        <Redirect to="/" />
       ) : (
         <Navbar bg="dark" expand="lg" variant="dark" fixed="bottom">
           <Navbar.Brand to="/jobpage" as={Link}>
@@ -27,7 +27,11 @@ function Header() {
               </Nav.Link>
 
               <button
-                style={{ border: "none", background: "none", color: "rgba(255,255,255,.5)" }}
+                style={{
+                  border: "none",
+                  background: "none",
+                  color: "rgba(255,255,255,.5)",
+                }}
                 onClick={() => app.auth().signOut()}
               >
                 Logout

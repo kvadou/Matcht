@@ -1,26 +1,34 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 //import { Link, useParams } from "react-router-dom";
 import profile from "../../profile.json";
-//import API from "../../utils/API";
+import API from "../../utils/API";
+import DeleteBtn from "../../components/DeleteBtn/DeleteBtn";
+import Table from "react-bootstrap/Table"
 
-class Profile extends Component {
 
-  state = {
-    profile,
-  };
+function Profile() {
 
-  //function Profile() {
+const [jobsDb, setJobsDb] = useState([]);
+// When user data base is set up
+//const [userDb, setUserDb] = useState([]);
 
-  //const [jobData, setJobData] = useState({});
+  useEffect(() => {
+    loadJobs();
+  }, []);
 
-  // const {id} = useParams()
-  // useEffect(() => {
-  //   API.getJob(id)
-  //     .then(res => setJobData(res.data))
-  //     .catch(err => console.log(err));
-  // }, [])
+  function loadJobs() {
+    API.getJobs()
+      .then(res => setJobsDb(res.data))
+      .catch(err => console.log(err))
+  }
 
-  render() {
+  function deleteJob(id) {
+    API.deleteJob(id)
+      .then(res => loadJobs())
+      .catch(err => console.log(err));
+  }
+
+  
     return (
       <div>
         <div className="container">
@@ -28,7 +36,7 @@ class Profile extends Component {
             <div className="col-sm-6 offset-sm-2">
               <h1>
                 Welcome Back, <br />
-                {profile[0].firstName} {profile[0].lastName}{" "}
+                Username!
               </h1>
             </div>
             <div className="col-sm-4">
@@ -46,62 +54,36 @@ class Profile extends Component {
           <div className="row">
             <div className="offset-sm-2 col-sm-8 offset-sm-2">
               <h1> Saved Jobs </h1>
-              {/* <p>{jobData.company_name}</p> */}
-              <table class="table">
-                <thead class="thead-dark">
+              <Table striped bordered hover>
+                <thead className="table header">
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Job Title</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Apply</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Job Status</th>
+                    <th>Location</th>
+                    <th>Link</th>
+                    <th>Remove</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>{profile[0].savedJobs[0].jobName}</td>
-                    <td>{profile[0].savedJobs[0].jobTitle}</td>
-                    <td>{profile[0].savedJobs[0].location}</td>
-                    <td>
-                      <a href={profile[0].savedJobs[0].link}>
-                        {" "}
-                        Link to Website{" "}
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>{profile[0].savedJobs[1].jobName}</td>
-                    <td>{profile[0].savedJobs[1].jobTitle}</td>
-                    <td>{profile[0].savedJobs[1].location}</td>
-                    <td>
-                      <a href={profile[0].savedJobs[1].link}>
-                        {" "}
-                        Link to Website
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>{profile[0].savedJobs[2].jobName}</td>
-                    <td>{profile[0].savedJobs[2].jobTitle}</td>
-                    <td>{profile[0].savedJobs[2].location}</td>
-                    <td>
-                      <a href={profile[0].savedJobs[2].link}>
-                        {" "}
-                        Link to Website
-                      </a>
-                    </td>
-                  </tr>
+                <tbody className ="table body">
+                  {jobsDb.map((job)=>(
+                    <tr key={job.id}>
+                      <th>{job.title}</th>
+                      <th>{job.company_name}</th>
+                      <th>{job.job_type}</th>
+                      <th>{job.candidate_required_location}</th>
+                      <th><a href={job.url}>Link to Job Posting</a></th>
+                      <DeleteBtn onClick={() => deleteJob(job._id)} />
+                    </tr>
+                  ))}
                 </tbody>
-              </table>
+              </Table>
             </div>
           </div>
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Profile;

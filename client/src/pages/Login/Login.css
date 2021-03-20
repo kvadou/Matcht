@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .crazy {
   display: flex;
   justify-content: center;
@@ -31,7 +32,7 @@ h1 {
   min-height: 100vh;
   padding: 0 20px;
   display: flex;
-  
+
 }
 
 .login .loginContainer {
@@ -111,9 +112,10 @@ h1 {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 }
+
 .over {
   /* color:#3d343a; */
   color: hotpink;

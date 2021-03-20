@@ -6,11 +6,11 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile.jsx";
 import Search from "./pages/Search/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Brand from "./components/Brand/Brand"
+import Brand from "./components/Brand/Brand";
 // import UserContext from "./components/UserContext/UserContext.js";
 // import ReactDOM from "react-dom";
 // import Switch from "react-bootstrap/esm/Switch";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 //import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 //AUTH STUFF //
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -18,32 +18,29 @@ import { AuthProvider } from "./Auth";
 //import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 
-
 function App() {
   const [login] = useState(false);
   return (
     <AuthProvider>
       <Router>
-        <div>
-        <Brand/>
+        <div className="wrapper">
+          <Brand />
           <PrivateRoute exact path="/" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
         </div>
-       
-       
-          <Header />
-          <PrivateRoute login={login} path="/search">
-            <Search />
-          </PrivateRoute>
-          <PrivateRoute login={login} path="/jobpage">
-            <Jobpage />
-          </PrivateRoute>
-          <PrivateRoute login={login} path="/profile">
-            <Profile />
-          </PrivateRoute>
-          {/* <Route path="/"></Route> */}
-        
+
+        <Header />
+        <PrivateRoute login={login} path="/search">
+          <Search />
+        </PrivateRoute>
+        <PrivateRoute login={login} path="/jobpage">
+          <Jobpage />
+        </PrivateRoute>
+        <PrivateRoute login={login} path="/profile">
+          <Profile />
+        </PrivateRoute>
+        {/* <Route path="/"></Route> */}
       </Router>
     </AuthProvider>
     //   <UserContext.Provider value={login}>

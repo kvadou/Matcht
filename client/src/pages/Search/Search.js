@@ -4,10 +4,9 @@ import API from "../../utils/API";
 import JobTable from "../../components/JobTable/JobTable";
 
 class Search extends Component {
-
   state = {
     jobData: [],
-    locationSearched: []
+    locationSearched: [],
   };
 
   componentDidMount() {
@@ -18,18 +17,18 @@ class Search extends Component {
     API.getJobs()
       .then((res) => {
         this.locationSearched = res.data;
-        this.setState({ jobData: res.data })
+        this.setState({ jobData: res.data });
       })
       .catch((err) => console.log(err));
-  }
+  };
 
-  handleInputLocationChange = event => {
+  handleInputLocationChange = (event) => {
     let newJobs = this.locationSearched.filter((res) => {
-      console.log(res.candidate_required_location)
+      console.log(res.candidate_required_location);
       let searchValue = res.data.candidate_required_location.toLowerCase();
       return searchValue.indexOf(event.target.value) !== -1;
     });
-    this.setState({ jobData:newJobs })
+    this.setState({ jobData: newJobs });
   };
 
   render() {
@@ -39,10 +38,17 @@ class Search extends Component {
           <label class="jobs">
             <span className="visually-hidden">Search Location</span>
           </label>
-          <input className="m-1" type="search" id="header-search" placeholder="Location" name="location" onChange={() => this.handleInputLocationChange.bind(this)}/>
+          <input
+            className="m-1"
+            type="search"
+            id="header-search"
+            placeholder="Location"
+            name="location"
+            onChange={() => this.handleInputLocationChange.bind(this)}
+          />
         </form>
         {this.state.jobData.map((res) => (
-          <JobTable 
+          <JobTable
             title={res.data.title}
             job_type={res.data.job_type}
             company_name={res.data.company_name}

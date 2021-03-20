@@ -30,6 +30,9 @@ function Profile() {
   }
 
   return (
+    <>
+    {
+      jobsDb.length === 0 ? "" :
     <div>
       <div className="container">
         <div className="row table-body">
@@ -79,6 +82,8 @@ function Profile() {
         </div>
       </div>
     </div>
+    }
+    </>
   );
 }
 

@@ -31,13 +31,13 @@ function Profile() {
     <div>
       <div className="container">
         <div className="row table-body">
-          <div className="col-sm-6 offset-sm-2">
+          <div className="header col-sm-6 offset-sm-2">
             <h1>
               Welcome Back, <br />
               Username!
             </h1>
           </div>
-          <div className="col-sm-4">
+          <div className="photo col-sm-4">
             <img src={profile[0].profilePic} alt="profilephoto" width="150" height="150" />
           </div>
         </div>

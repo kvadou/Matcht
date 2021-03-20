@@ -6,10 +6,11 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile.jsx";
 import Search from "./pages/Search/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Brand from "./components/Brand/Brand"
 // import UserContext from "./components/UserContext/UserContext.js";
 // import ReactDOM from "react-dom";
 // import Switch from "react-bootstrap/esm/Switch";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 //import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 //AUTH STUFF //
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -24,10 +25,12 @@ function App() {
     <AuthProvider>
       <Router>
         <div>
+        <Brand/>
           <PrivateRoute exact path="/" component={Profile} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
         </div>
+       
        
           <Header />
           <PrivateRoute login={login} path="/search">
@@ -39,7 +42,7 @@ function App() {
           <PrivateRoute login={login} path="/profile">
             <Profile />
           </PrivateRoute>
-          <Route path="/"></Route>
+          {/* <Route path="/"></Route> */}
         
       </Router>
     </AuthProvider>

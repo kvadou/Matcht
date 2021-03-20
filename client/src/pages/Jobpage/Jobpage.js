@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SwipeCard from "react-tinder-card";
 import "./style.css";
-//import jobdata from "../../utils/jobdata.json";
 import API from "../../utils/API";
 
 function Jobpage() {

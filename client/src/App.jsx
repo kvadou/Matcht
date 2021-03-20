@@ -25,7 +25,7 @@ function App() {
       <Router>
         <div className="wrapper">
           <Brand />
-          <PrivateRoute exact path="/" component={Profile} />
+          <PrivateRoute exact path="/" component={Search} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
         </div>

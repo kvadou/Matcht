@@ -25,10 +25,10 @@ class Search extends Component {
   handleInputLocationChange = (event) => {
     let newJobs = this.locationSearched.filter((res) => {
       console.log(res.candidate_required_location);
-      let searchValue = res.data.candidate_required_location.toLowerCase();
+      let searchValue = res.candidate_required_location.toLowerCase();
       return searchValue.indexOf(event.target.value) !== -1;
     });
-    this.setState({ jobData: newJobs });
+    this.setState({ jobData:newJobs });
   };
 
   render() {
@@ -44,20 +44,22 @@ class Search extends Component {
             id="header-search"
             placeholder="Location"
             name="location"
-            onChange={() => this.handleInputLocationChange.bind(this)}
+            onChange={this.handleInputLocationChange.bind(this)}
           />
         </form>
-        {this.state.jobData.map((res) => (
-          <JobTable
-            title={res.data.title}
-            job_type={res.data.job_type}
-            company_name={res.data.company_name}
-            category={res.data.category}
-            candidate_required_location={res.data.candidate_required_location}
-            url={res.data.url}
-            description={res.data.description}
-          />
-        ))}
+        <div>
+          {this.state.jobData.map((res) => (
+            <JobTable
+              title={res.title}
+              job_type={res.job_type}
+              company_name={res.company_name}
+              category={res.category}
+              candidate_required_location={res.candidate_required_location}
+              url={res.url}
+              description={res.description}
+            />
+          ))}
+        </div>
       </div>
     );
   }

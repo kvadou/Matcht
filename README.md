@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+<h1 align="center">Project 3: Team Matcht</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Matcht
 
-## Available Scripts
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Matcht is job search tool that allows users to browse job opportunities based on their location and save to their profile so they can go back and apply for the jobs they are interested in. Swiping left on a job opportunity will remote it from the available jobs list, swiping right will save the job to their profile. Core technology includes the MERN stack, Firebase & React-tinder-card.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Screenshot of the completed output:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Yoke2 Screenshot](./src/matcht.png)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm i`
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will seed the database with a list of potential job opportunities
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm run seed`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run the following command at the root of the directory and you will be able to view the local website at http://localhost:3000/:
 
-### `npm run eject`
+`npm start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project was deployed on heroku and can viewed at this website:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`https://matcht1.herokuapp.com/`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Contributing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+:octocat: [Dillon Vora](https://github.com/dvorav)
+:octocat: [Benito Gonzalez](https://github.com/ohnobenito)
+:octocat: [Kelsey Lyngdal](https://github.com/klyngdal)
+:octocat: [Vina Kurniasari](https://github.com/vina19)
+:octocat: [Doug Kvamme](https://github.com/kvadou)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br />

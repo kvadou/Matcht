@@ -29,7 +29,7 @@ class Search extends Component {
       let searchValue = res.candidate_required_location.toLowerCase();
       return searchValue.indexOf(event.target.value) !== -1;
     });
-    this.setState({ jobData:newJobs });
+    this.setState({ jobData: newJobs });
   };
 
   render() {

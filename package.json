@@ -19,7 +19,7 @@
     "url": "git+https://github.com/kvadou/Matcht.git"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^6.0.0"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",

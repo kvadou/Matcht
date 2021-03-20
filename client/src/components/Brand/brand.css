@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+
+.brand {
+
+
+display: inline;
+position: absolute;
+/* float: right; */
+font-size: 50px;
+font-family: 'Paytone One', sans-serif;
+font-weight: bold;
+letter-spacing: 2.5vh;
+margin-top: 1%;
+margin-bottom: 7%;
+margin-left: 4%;
+margin-right: 7%;
+padding-top: 2.5%;
+text-shadow: -1px 4px 8px rgba(6,6,6,0.44);
+
+}
+
+
+.icon {
+    color: linear-gradient(315deg, #bf3a30 0%, #864ba2 74%);
+    padding-bottom: 4px;
+    filter:drop-shadow( -1px 4px 8px rgba(6,6,6,0.44));
+}
+
+
+@media only screen and (max-width: 1250px) {
+    .brand {
+      display: none;
+    }
+}  
+
+
+
+

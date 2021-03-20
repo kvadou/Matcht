@@ -23,7 +23,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactjob", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-  useFindAndModify: false,
 });
 
 // Start the API server

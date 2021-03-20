@@ -768,7 +768,8 @@ db.Job
   .remove({})
   .then(() => db.Job.collection.insertMany(jobSeed))
   .then((data) => {
-    console.log(data.result.n + " records inserted!");
+    console.log("Seeder file has loaded onto the DB!")
+    console.log(data.result.n + " Records Inserted!");
     process.exit(0);
   })
   .catch((err) => {

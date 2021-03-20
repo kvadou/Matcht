@@ -1,0 +1,9 @@
+.table {
+    position: sticky;
+    overflow-y: scroll !important;
+}
+
+.wrapper {
+    max-height: calc(100vh - 56px);
+    overflow-y: scroll;
+}

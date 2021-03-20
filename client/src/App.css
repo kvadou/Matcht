@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 .App {
   text-align: center;
 }
@@ -39,15 +39,15 @@
 }
 
 /* Added portion */
-/* body {
-  background: #fffbd5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-overflow-x:hidden ;
-overflow-y: hidden;
-height: 100%;
-margin: 0;
-background-repeat: no-repeat;
-background-attachment: fixed;
-} */
+body {
+  /*  background: #fffbd5;  /* fallback for old browsers */
+  /*  background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+  /*  background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

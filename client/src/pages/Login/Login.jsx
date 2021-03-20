@@ -30,11 +30,11 @@ const Login = ({ history }) => {
 
   return (
 
-<container className="login">
+<div className="login">
   <div className="loginContainer">
     <h1>Login</h1>
   
-    <div class="centered">
+    <div className="centered">
       <Form onSubmit={handleLogin}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -44,12 +44,12 @@ const Login = ({ history }) => {
           <Form.Label>Password</Form.Label>
             <Form.Control name="password" type="password" placeholder="Password" />
         </Form.Group>
-        <div class="middle">    
+        <div className="middle">    
         <Button name="button" variant="primary" type="submit">
         Submit
         </Button>
         </div>
-        <div class="crazy"> 
+        <div className="crazy"> 
     <div>
       <br></br>
         <Button name="button" href="./SignUp">Register</Button> 
@@ -58,7 +58,7 @@ const Login = ({ history }) => {
       </Form>
   </div>
   </div>
-</container>
+</div>
   );
 };
 

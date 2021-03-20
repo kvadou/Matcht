@@ -6,7 +6,7 @@ import { AuthContext } from "../../Auth";
 
 function Header() {
   const { currentUser } = useContext(AuthContext);
-  console.log(currentUser);
+  // console.log(currentUser);
   return (
     <>
       {!currentUser ? (

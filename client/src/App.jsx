@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import UserContext from "./components/UserContext/UserContext.js";
 // import ReactDOM from "react-dom";
 // import Switch from "react-bootstrap/esm/Switch";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 //import PrivateRoute from "./components/PrivateRoute/PrivateRoute.js";
 //AUTH STUFF //
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";

@@ -20,7 +20,7 @@ const SignUp = ({ history }) => {
   }, [history]);
 
   return (
-  <container>
+  <div>
     <div>
       <h1>Register</h1>
       </div>
@@ -41,9 +41,7 @@ const SignUp = ({ history }) => {
         </div>
       </Form>
       </div>
-      
-  </container>
-
+    </div>
   );
 };
 

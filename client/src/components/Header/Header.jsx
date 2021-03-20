@@ -19,8 +19,8 @@ function Header() {
           variant="dark"
           fixed="bottom"
         >
-          <Navbar.Brand to="/jobpage" as={Link}>
-            Job Page
+          <Navbar.Brand to="/profile" as={Link}>
+            Match't
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

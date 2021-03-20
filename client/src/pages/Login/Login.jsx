@@ -13,9 +13,7 @@ const Login = ({ history }) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+        await app.auth().signInWithEmailAndPassword(email.value, password.value);
         history.push("/");
       } catch (error) {
         alert(error);
@@ -39,30 +37,21 @@ const Login = ({ history }) => {
           <Form onSubmit={handleLogin}>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control
-                name="email"
-                type="email"
-                placeholder="Enter email"
-              />
+              <Form.Control name="email" type="email" placeholder="Enter email" />
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control
-                name="password"
-                type="password"
-                placeholder="Password"
-              />
+              <Form.Control name="password" type="password" placeholder="Password" />
             </Form.Group>
             <div className="middle">
               <Button bsPrefix="over" className="btn btn-danger btn-lg m-3" type="submit">
                 Login
               </Button>
-            
 
-            <div>
-              <Button className="btn btn-danger btn-lg m-3 over" to="./SignUp" as={Link}>
-                Sign up
-              </Button>
+              <div>
+                <Button className="btn btn-danger btn-lg m-3 over" to="./SignUp" as={Link}>
+                  Sign up
+                </Button>
               </div>
             </div>
           </Form>

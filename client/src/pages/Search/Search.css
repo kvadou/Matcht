@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .jobs {
@@ -15,6 +16,13 @@
 
 #button {
 
+    justify-content: center;
+    align-items: center;
+}
+
+.visually-hidden {
+    font-size: xx-large;
+    color: white;
     justify-content: center;
     align-items: center;
 }

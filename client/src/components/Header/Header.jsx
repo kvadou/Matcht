@@ -12,7 +12,13 @@ function Header() {
       {!currentUser ? (
         <Redirect to="/login" />
       ) : (
-        <Navbar className="d-flex" style={ {backgroundColor: '485461', backgroundImage: 'linear-gradient(315deg, #485461 0%, #28313b 74%)'}} expand="lg" variant="dark" fixed="bottom">
+        <Navbar
+          className="d-flex"
+          style={{ backgroundColor: "485461", backgroundImage: "linear-gradient(315deg, #485461 0%, #28313b 74%)" }}
+          expand="lg"
+          variant="dark"
+          fixed="bottom"
+        >
           <Navbar.Brand to="/jobpage" as={Link}>
             Job Page
           </Navbar.Brand>
@@ -26,7 +32,6 @@ function Header() {
                 Search
               </Nav.Link>
 
-            
               <button
                 style={{
                   border: "none",

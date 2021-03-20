@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
+import { Redirect, withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
 import app from "../../base";
@@ -14,7 +14,7 @@ const Login = ({ history }) => {
       const { email, password } = event.target.elements;
       try {
         await app.auth().signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        history.push("/search");
       } catch (error) {
         alert(error);
       }
@@ -24,11 +24,11 @@ const Login = ({ history }) => {
 
   const { currentUser } = useContext(AuthContext);
 
-  if (currentUser) {
-    return <Redirect to="/" />;
-  }
-
   return (
+    <>
+      {currentUser ? (
+        <Redirect to="/search" />
+      ) : (
     <div className="login">
       <div className="loginContainer centered">
         <h1 className="m-5">Login</h1>
@@ -58,6 +58,8 @@ const Login = ({ history }) => {
         </div>
       </div>
     </div>
+        )}
+    </>
   );
 };
 

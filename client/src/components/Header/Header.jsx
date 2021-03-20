@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import app from "../../base";
 import { AuthContext } from "../../Auth";
 
 function Header() {
   const { currentUser } = useContext(AuthContext);
-  // console.log(currentUser);
+
   return (
     <>
       {!currentUser ? (
-        <Redirect to="/login" />
+        ""
       ) : (
         <Navbar
           className="d-flex"

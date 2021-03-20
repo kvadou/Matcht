@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 //import { Link, useParams } from "react-router-dom";
 import profile from "../../profile.json";
 import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn/DeleteBtn";
 import Table from "react-bootstrap/Table";
 import "./Profile.css";
+import { AuthContext } from "../../Auth";
 
 function Profile() {
   const [jobsDb, setJobsDb] = useState([]);
+  const { currentUser } = useContext(AuthContext);
   // When user data base is set up
   //const [userDb, setUserDb] = useState([]);
 
@@ -34,7 +36,7 @@ function Profile() {
           <div className="header col-sm-6 offset-sm-2">
             <h1>
               Welcome Back, <br />
-              Username!
+              {currentUser.email}
             </h1>
           </div>
           <div className="photo col-sm-4">

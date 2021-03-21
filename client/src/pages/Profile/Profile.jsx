@@ -6,6 +6,8 @@ import DeleteBtn from "../../components/DeleteBtn/DeleteBtn";
 import Table from "react-bootstrap/Table";
 import "./Profile.css";
 import { AuthContext } from "../../Auth";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Profile() {
   const [jobsDb, setJobsDb] = useState([]);
@@ -57,7 +59,7 @@ function Profile() {
                 <tr>
                   <th>Job Title</th>
                   <th>Company</th>
-                  <th>Job Status</th>
+                  <th>Job Type</th>
                   <th>Location</th>
                   <th>Link</th>
                   <th>Remove</th>
@@ -71,8 +73,9 @@ function Profile() {
                     <th>{job.job_type}</th>
                     <th>{job.candidate_required_location}</th>
                     <th>
-                      <a href={job.url}>Link to Job Posting</a>
-                    </th>
+                    <a href={job.url}>
+                        <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
+                      </a>                    </th>
                     <DeleteBtn onClick={() => deleteJob(job._id)} />
                   </tr>
                 ))}

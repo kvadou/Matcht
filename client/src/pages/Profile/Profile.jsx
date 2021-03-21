@@ -58,13 +58,11 @@ function Profile() {
           </div>
 
           <div className="container">
-         
-
             <div className="row">
               <div className="offset-sm-2 col-sm-8 offset-sm-2">
-                <h1 className="saveTitle"> Saved Jobs </h1>
+                <h5 className="saveTitle">Saved Jobs</h5>
                 <Table striped bordered hover size="lg">
-                  <thead className="table header">
+                  <thead>
                     <tr>
                       <th>Job Title</th>
                       <th>Company</th>
@@ -74,7 +72,7 @@ function Profile() {
                       <th>Remove</th>
                     </tr>
                   </thead>
-                  <tbody className="table body">
+                  <tbody>
                     {jobsDb.map((job) => (
                       <tr key={job.id}>
                         <th>{job.title}</th>
@@ -84,7 +82,7 @@ function Profile() {
                         <th className="jobLink">
                           <a href={job.url}>
                             <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
-                          </a>{" "}
+                          </a>
                         </th>
                         <DeleteBtn onClick={() => deleteJob(job._id)} />
                       </tr>

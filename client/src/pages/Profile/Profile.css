@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 
-.table {
+/* .table {
   padding: 0px;
   position: sticky;
   overflow-y: scroll !important;
   opacity: 70%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color:white;
-}
+} */
 
 th {
   justify-content: center;
@@ -28,10 +28,6 @@ th {
   overflow-y: scroll;
 }
 
-/* .header {
-    padding-top: 30px;
-    
-} */
 
 .photo {
   padding-top: 30px;
@@ -63,21 +59,18 @@ th {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+ }
 
-.saveTitle {
+ .saveTitle {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 20px;
     padding: 20px;
-    display: table;
     text-align: center;
     border: 1px solid lightgrey;
     font-family: 'Paytone One', sans-serif;
-    color: black;
-    opacity: 70%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
+    font-size: 35px;
     
-}
+} 

@@ -8,16 +8,16 @@
 display: inline;
 position: absolute;
 /* float: right; */
-font-size: 50px;
+font-size: 65px;
 font-family: 'Paytone One', sans-serif;
 font-weight: bold;
-letter-spacing: 2.5vh;
 margin-top: 1%;
 margin-bottom: 7%;
 margin-left: 4%;
 margin-right: 7%;
 padding-top: 2.5%;
 text-shadow: -1px 4px 8px rgba(6,6,6,0.44);
+
 
 }
 

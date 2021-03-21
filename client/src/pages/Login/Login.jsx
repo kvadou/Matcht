@@ -31,7 +31,7 @@ const Login = ({ history }) => {
       ) : (
     <div className="login">
       <div className="loginContainer centered">
-        <h1 className="m-5">Login</h1>
+        <h1 className="m-5 logintitle">Login</h1>
 
         <div>
           <Form onSubmit={handleLogin}>

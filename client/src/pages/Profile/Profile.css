@@ -1,52 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 
 .table {
-    padding: 0px;
-    position: sticky;
-    overflow-y: scroll !important;
-    opacity: 70%;
-    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
-    background-color: #ddd4d0;
-    /* background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%); */
-    }
+  padding: 0px;
+  position: sticky;
+  overflow-y: scroll !important;
+  opacity: 70%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ddd4d0;
+}
 
-    th  {
-        justify-content: center;
-    }
+th {
+  justify-content: center;
+}
 
 .table tr {
-    padding: 0px;
-color: black;
-
+  padding: 0px;
+  color: black;
 }
 .table-top {
-    padding: auto;
-    text-align: center;
+  padding: auto;
+  text-align: center;
 }
 .wrapper {
-    max-height: calc(100vh - 56px);
-    overflow-y: scroll;
+  max-height: calc(100vh - 56px);
+  overflow-y: scroll;
 }
 
-.header {
+/* .header {
     padding-top: 30px;
     
-}
+} */
 
 .photo {
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
 h1 {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
+  color: black;
 }
 
 .jobLink a {
-    color:white;
-    justify-content: center;
+  color: black;
+  justify-content: center;
 }
 
-.photo{
-    border: 1px solid black;
-    float: right;
+.photo {
+  border: 1px solid black;
+  float: right;
+}
+
+.content {
+  position: relative;
+}
+.content .hi {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 50px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.hi img {
+  border: 1px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.saveTitle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: table;
+    text-align: center;
+    border: 1px solid lightgrey;
+    font-family: 'Paytone One', sans-serif;
+    color: black;
+    opacity: 70%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    
 }
